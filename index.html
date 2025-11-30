@@ -8,7 +8,12 @@
         /* CSS 樣式 (同前) */
         body {
             font-family: '微軟正黑體', Arial, sans-serif;
-            background-color: #f4f4f9;
+            /* 👇 修改點 1: 設定背景圖片 */
+            background-image: url('BG.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #f4f4f9; /* 作為圖片載入前的備用背景色 */
+            /* -------------------- */
             color: #333;
             line-height: 1.6;
             margin: 0;
@@ -18,7 +23,8 @@
         .container {
             max-width: 700px;
             margin: 0 auto;
-            background: #fff;
+            /* 👇 修改點 2: 設定半透明背景 (80% 不透明度的白色) */
+            background: rgba(255, 255, 255, 0.8);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -347,7 +353,7 @@
 
     <script>
         // 摩斯電碼的原始碼 (關卡 3)
-        const morseCode = "- .... .-. . . -....- - .- .-.. . -. - ... .-.. .. -. --. --.. .... ..";
+        const morseCode = "- .... .-. . . -....- - .- .-.. . -. - ... .-.. .. -. --.. .... ..";
         
         // 卡片圖片路徑對應
         const cardImages = {
